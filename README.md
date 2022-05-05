@@ -1,7 +1,7 @@
 
 # **🥞 PancakeSwap Prediction v2 – May 2022 Update 🥞**
 
-![PancakeSwap-Logo-Big](pancake.png)
+![PancakeSwap-Logo-Big](pancakehead.png)
 
 
 This bot wins the majority of rounds on PancakeSwap & CandleGenie based.
