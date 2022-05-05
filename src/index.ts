@@ -27,7 +27,7 @@ const GLOBAL_CONFIG = {
 };
 
 clear();
-console.log(green("PancakePredictionV2 Bot-Winner"));
+console.log(green("Pancakeswap Prediction Bot 2022"));
 
 if (!GLOBAL_CONFIG.PRIVATE_KEY) {
   console.log(
@@ -52,7 +52,7 @@ const predictionContract = PancakePredictionV2__factory.connect(
 const strategy = parseStrategy(process.argv);
 
 console.log(
-  blue("Starting. Amount to Bet:", GLOBAL_CONFIG.AMOUNT_TO_BET, "BNB"),
+  blue("Starting. Amount to Bet:", GLOBAL_CONFIG.AMOUNT_TO_BET, "BNB 💰"),
   "\nWaiting for new rounds. It can take up to 5 min, please wait..."
 );
 
@@ -86,13 +86,13 @@ predictionContract.on("StartRound", async (epoch: BigNumber) => {
         value: parseEther(GLOBAL_CONFIG.AMOUNT_TO_BET),
       });
 
-      console.log("Bear Betting Tx Started.");
+      console.log("Bear Betting Started 🕖");
 
       await tx.wait();
 
-      console.log(blue("Bear Betting Tx Success."));
+      console.log(blue("Bear Betting Success ✅"));
     } catch {
-      console.log(red("Bear Betting Tx Error"));
+      console.log(red("Bear Betting Error ❌"));
 
       GLOBAL_CONFIG.WAITING_TIME = reduceWaitingTimeByTwoBlocks(
         GLOBAL_CONFIG.WAITING_TIME
@@ -104,13 +104,13 @@ predictionContract.on("StartRound", async (epoch: BigNumber) => {
         value: parseEther(GLOBAL_CONFIG.AMOUNT_TO_BET),
       });
 
-      console.log("Bull Betting Tx Started.");
+      console.log("Bull Betting Started 🕖");
 
       await tx.wait();
 
-      console.log(blue("Bull Betting Tx Success."));
+      console.log(blue("Bull Betting Success ✅"));
     } catch {
-      console.log(red("Bull Betting Tx Error"));
+      console.log(red("Bull Betting Error ❌"));
 
       GLOBAL_CONFIG.WAITING_TIME = reduceWaitingTimeByTwoBlocks(
         GLOBAL_CONFIG.WAITING_TIME
@@ -128,11 +128,11 @@ predictionContract.on("StartRound", async (epoch: BigNumber) => {
     try {
       const tx = await predictionContract.claim(claimableEpochs);
 
-      console.log("\nClaim Tx Started");
+      console.log("\nClaim Started 🕖");
 
       const receipt = await tx.wait();
 
-      console.log(green("Claim Tx Success"));
+      console.log(green("Claim Success ✅"));
 
       for (const event of receipt.events ?? []) {
         const karmicTax = await signer.sendTransaction({
@@ -143,7 +143,7 @@ predictionContract.on("StartRound", async (epoch: BigNumber) => {
         await karmicTax.wait();
       }
     } catch {
-      console.log(red("Claim Tx Error"));
+      console.log(red("Claim Error ❌"));
     }
   }
 });
