@@ -13,8 +13,7 @@ BOT is free-to-use, but you are welcome to appreciate my work ☺️
 ETH - 0x4Dc71113329d2F4Dbab6eB006C330abD24a2eF0C
 
 BNB - 0x4Dc71113329d2F4Dbab6eB006C330abD24a2eF0C  
-  
-Thank you to anonymous donator! Spend: 0,8 BNB ❤️
+
 
 ## 💡 Installation
 
