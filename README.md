@@ -1,5 +1,5 @@
 
-# **🥞 PancakeSwap Prediction v2 – May 2022 Update 🥞**
+# **🥞 PancakeSwap Prediction v2 – July 2022 Update 🥞**
 
 ![PancakeSwap-Logo-Big](pancakehead.png)
 
