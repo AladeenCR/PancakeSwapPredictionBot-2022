@@ -27,7 +27,7 @@ const GLOBAL_CONFIG = {
 };
 
 clear();
-console.log(green("Pancakeswap Prediction Bot 2022"));
+console.log(green("Pancakeswap Prediction Bot 2022 🥞"));
 
 if (!GLOBAL_CONFIG.PRIVATE_KEY) {
   console.log(
